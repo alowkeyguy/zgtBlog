@@ -52,7 +52,7 @@
 > * 创建变量（variables），函数（functions ）和参数（arguments）
 > * 确定"this"。
 2. __激活/执行阶段：__
-> * 分配值，引用函数和解释/执行代码
+> * var 赋值，（function声明）指向函数，解释/执行代码
 
 可以将每个execution context概念上表示为具有3个属性的对象：
 ```执行上下文对象

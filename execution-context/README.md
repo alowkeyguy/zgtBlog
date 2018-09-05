@@ -1,4 +1,4 @@
-# JavaScript中的执行上下文和队列（栈）是什么？
+# JavaScript中的执行上下文和队列（栈）的关系？
 * 原文：[What is the Execution Context & Stack in JavaScript?](http://davidshariff.com/blog/what-is-the-execution-context-in-javascript/#first-article)
 * git地址：[JavaScript中的执行上下文和队列（栈）的关系？](https://github.com/alowkeyguy/zgtBlog/tree/master/execution-context)
 * 导读：以前总是看到相关文章提到什么变量提升，函数提升啥的，什么函数提升优先级大于变量的，总是知其然，不知其所以然，当面试官拿着同一name，却不断function, 和var赋值，然后让你告诉他每一个阶段该是什么值的时候，拿着啥变量提升和函数提升是解释不通的，至少我不能-_-。David Shariff的这篇文章为我们讲述了其中的原理，让人看了豁然开朗

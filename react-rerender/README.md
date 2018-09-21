@@ -33,7 +33,7 @@ shouldComponentUpdate(nextProps, nextState) {
 ```
 但是，state里的数据这么多，还有对象，还有复杂类型数据，react的理念就是拆分拆分再拆分，这么多子组件，我要每个组件都去自己一个一个对比吗？？不存在的，这么麻烦，要知道我们的终极目标是不劳而获-_-
 ### React.PureComponent
-React.PureComponent 与 React.Component 几乎完全相同，但 React.PureComponent 通过props和state的浅对比来实现 shouldComponentUpate()。如果对象包含复杂的数据结构，它可能会因深层的数据不一致而产生错误的否定判断(表现为对象深层的数据已改变视图却没有更新）
+React.PureComponent 与 React.Component 几乎完全相同，但 React.PureComponent 通过props和state的浅对比来实现 shouldComponentUpate()。如果对象包含复杂的数据结构，它可能会因深层的数据不一致而产生错误的否定判断(表现为对象深层的数据已改变视图却没有更新）
 > 关注点：
 * 无论组件是否是 PureComponent，如果定义了 shouldComponentUpdate()，那么会调用它并以它的执行结果来判断是否 update。在组件未定义 shouldComponentUpdate() 的情况下，会判断该组件是否是 PureComponent，如果是的话，会对新旧 props、state 进行 shallowEqual 比较，一旦新旧不一致，会触发 update。
 * 浅判等 只会比较到两个对象的 ownProperty 是否符合 [Object.js()](https://github.com/facebook/fbjs/blob/c69904a511b900266935168223063dd8772dfc40/packages/fbjs/src/core/shallowEqual.js#L39) 判等，不会递归地去深层比较---[源码](https://github.com/facebook/fbjs/blob/c69904a511b900266935168223063dd8772dfc40/packages/fbjs/src/core/shallowEqual.js#L39)
@@ -101,7 +101,7 @@ function shallowEqual(objA: mixed, objB: mixed): boolean {
 > ***
 > 译：不能以正确的姿势来使用immutable-js做优化，你就不要瞎折腾了，用它react-immutable-render-mixin就行了
 
-它和ProComponent原理一样，唯一的区别就是新旧数据的对比，react-immutable-render-mixin用了[immutable-js](https://github.com/facebook/immutable-js)的Immutable.is()方法去做对比，性能强，复杂类型数据也能对比（这里不对immutable-js做讨论，反正很强）,相比于React.PureComponent更方便---[源码](https://github.com/jurassix/react-immutable-render-mixin/blob/master/src/shallowEqualImmutable.js)
+它和ProComponent原理一样，唯一的区别就是新旧数据的对比，react-immutable-render-mixin用了[immutable-js](https://github.com/facebook/immutable-js) 的is()方法去做对比，性能强，复杂类型数据也能对比（这里不对immutable-js做讨论，一篇很不错的文章[Immutable 详解及 React 中实践](https://github.com/camsong/blog/issues/3)）,相比于React.PureComponent更方便---[源码](https://github.com/jurassix/react-immutable-render-mixin/blob/master/src/shallowEqualImmutable.js)
 ```
 import Immutable from 'immutable';
 

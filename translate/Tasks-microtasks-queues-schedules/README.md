@@ -114,15 +114,15 @@ outer.addEventListener('click', onClick);
 
 你的猜测是否不同？若是，你也可能是对的。但不幸的是各浏览器不一致：
 ![chrome](./static/chrome.png) | ![firefox](./static/firefox.png) | ![edge](./static/edge.png) | ![safari.png](./static/safari.png)
------------------------------  | -------------------------------- | -------------------------- | ----------------------------------
-      click    |     click       |   click         |      click
-      promise  |     mutate      |   click         |      mutate
-      mutate   |     click       |   mutate        |      click
-      click    |     mutate      |   timeout       |      mutate
-      promise  |     timeout     |   promise       |      promise
-      mutate   |     promise     |   timeout       |      promise
-      timeout  |     promise     |   promise       |      timeout
-      timeout  |     timeout     |                 |      timeout
+---------- | ----------- | ---------- | ----------
+  click    |   click     |   click    |  click
+  promise  |   mutate    |   click    |  mutate
+  mutate   |   click     |   mutate   |  click
+  click    |   mutate    |   timeout  |  mutate
+  promise  |   timeout   |   promise  |  promise
+  mutate   |   promise   |   timeout  |  promise
+  timeout  |   promise   |   promise  |  timeout
+  timeout  |   timeout   |            |  timeout
 
 ## 哪个是正确的
 
@@ -165,14 +165,14 @@ inner.click();
 跟之前一样，它会触发 click 事件，不过是通过代码而不是实际的交互动作。
 ## 试一下
 ![chrome](./static/chrome.png) | ![firefox](./static/firefox.png) | ![edge](./static/edge.png) | ![safari.png](./static/safari.png)
------------------------------  | -------------------------------- | -------------------------- | ----------------------------------
-      click    |     click       |   click          |      click
-      click    |     click       |   click          |      click
-      promise  |     mutate      |   mutate         |      mutate
-      mutate   |     timeout     |   timeout        |      promise
-      promise  |     promise     |   promise        |      promise
-      timeout  |     promise     |   timeout        |      timeout
-      timeout  |     timeout     |   promise        |      timeout
+---------  | --------- | ---------- | -----------
+  click    |  click    |  click     |   click
+  click    |  click    |  click     |   click
+  promise  |  mutate   |  mutate    |   mutate
+  mutate   |  timeout  |  timeout   |   promise
+  promise  |  promise  |  promise   |   promise
+  timeout  |  promise  |  timeout   |   timeout
+  timeout  |  timeout  |  promise   |   timeout
 
 我发誓我在 Chrome 中始终得到不同的结果，我更新了这个表许多次才意识到我测试的是 Canary。假如你在 Chrome 中得到了不同的结果，请在评论中告诉我是哪个版本。
 ## 为什么不同

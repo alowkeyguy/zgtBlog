@@ -113,6 +113,7 @@ outer.addEventListener('click', onClick);
 点击里面的矩形触发一个 click 事件：
 
 你的猜测是否不同？若是，你也可能是对的。但不幸的是各浏览器不一致：
+
 ![chrome](./static/chrome.png) | ![firefox](./static/firefox.png) | ![edge](./static/edge.png) | ![safari.png](./static/safari.png)
 ---------- | ----------- | ---------- | ----------
   click    |   click     |   click    |  click

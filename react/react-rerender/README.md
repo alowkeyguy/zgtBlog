@@ -96,7 +96,7 @@ function shallowEqual(objA: mixed, objB: mixed): boolean {
 针对以上规则我们在项目开发种可以做出如下优化：
 > 尽量将复杂类型数据（ArrayList）所关联的视图单独拆成PureComonent有助于提高渲染性能，比如表单、文本域和复杂列表在同一个 render() 中，表单域的输入字段改变会频繁地触发 setState() 从而导致 组件 重新 render()。而用于渲染复杂列表的数据其实并没有变化，但由于重新触发 render()，列表还是会重新渲染。
 ### [react-immutable-render-mixin](https://github.com/jurassix/react-immutable-render-mixin)
-我想复杂数组没变化时也不要render(), 那你用[react-immutable-render-mixin](https://github.com/jurassix/react-immutable-render-mixin)：
+我想复杂数组没变化时也不要render(), 那你用[react-immutable-render-mixin](https://github.com/jurassix/react-immutable-render-mixin)，来，我们一起看看插件介绍：
 > Users are urged to use PureRenderMixin with facebook/immutable-js. If performance is still an issue an examination of your usage of Immutable.js should be your first path towards a solution. This library was created from experimentations with Immutable that were ultimately erroneous; improper usage of Immutable.js 💩. Users should be able to achieve maximum performance simply using PureRenderMixin.
 > ***
 > 译：不能以正确的姿势来使用immutable-js做优化，你就不要瞎折腾了，用它react-immutable-render-mixin就行了

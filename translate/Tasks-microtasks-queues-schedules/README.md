@@ -2,7 +2,6 @@
 * 原文：[Tasks, microtasks, queues and schedules](https://jakearchibald.com/2015/tasks-microtasks-queues-and-schedules/)
 * git地址：[Tasks(任务), microtasks(微任务), queues（队列） and schedules（回调队列）](https://github.com/alowkeyguy/zgtBlog/tree/master/translate/Tasks-microtasks-queues-schedules)
 
-
 如果你更喜欢视频，[Philip Roberts](https://twitter.com/philip_roberts) 在 JSConf 上就[事件循环](https://www.youtube.com/watch?v=8aGhZQkoFbQ)有一个很棒的演讲——没有讲 microtasks，不过很好的介绍了其它概念。好，继续！
 
 ## 试一下

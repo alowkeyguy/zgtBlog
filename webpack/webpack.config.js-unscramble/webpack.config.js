@@ -11,10 +11,28 @@ module.exports = {
        {
          test: /\.css$/,
          use: [
-           'style-loader',
-           'css-loader'
-         ]
-       }
+          { loader: 'style-loader' },
+          {
+              loader: 'css-loader',
+              options: {
+                  modules: true,
+                  localIdentName: '[path][name]__[local]--[hash:base64:5]'
+              }
+          },
+        ]
+      },
+      {
+        test: /\.(png|svg|jpg|gif|jfif)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name]-[hash:5].[ext]',
+              outputPath: 'image/'
+            }
+          }
+        ]
+      }
      ]
    }
 };

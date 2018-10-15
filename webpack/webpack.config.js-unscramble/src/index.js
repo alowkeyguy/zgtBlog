@@ -1,12 +1,18 @@
 import _ from 'lodash';
-import './style.css';
+import style from './style.css';
+import img from './image/img.jfif'
 
   function component() {
+    console.log(style)
     var element = document.createElement('div');
 
-    // lodash 是由当前 script 脚本 import 导入进来的
     element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-   element.classList.add('hello');
+    element.classList.add(style.hello);
+
+   var myIcon = new Image();
+   myIcon.src = img;
+
+   element.appendChild(myIcon);
 
     return element;
   }

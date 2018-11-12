@@ -7,3 +7,5 @@
 # 翻译
 * [JavaScript中的执行上下文和队列（栈）的关系？](https://github.com/alowkeyguy/zgtBlog/blob/master/translate/execution-context)
 * [Tasks(任务), microtasks(微任务), queues（队列） and schedules（回调队列）](https://github.com/alowkeyguy/zgtBlog/blob/master/translate/Tasks-microtasks-queues-schedules)
+# webpack
+* [webpack4搭建Vue开发环境笔记](https://github.com/alowkeyguy/webpack4.x-vue)

@@ -29,11 +29,14 @@ Config file location
 ## 分支管理过程中常用命令
 * `git branch newbranch dev`从dev分支切出newbranch
 * `git branch newbranch` > `git checkout newbranch`新建并切换到newbranch，默认从当前HEAD所指向的分支切出
-* `git checkout -b newbranch master`在本地master分支上切出newbranch分支，并将HEAD指向newbranch分支（切换到新分支）
+* `git checkout -b newbranch master`在本地master分支上切出newbranch分支，并将HEAD指向newbranch分支（切换到新分支），如果master有跟踪分支，则跟
 * `git push origin newbranch`将本地分支推送至远程服务器`如果远程服务器该分支不存在，则会自动新建一个`
 * `git merge --no-ff bug-1`使用--no-ff参数后，会执行正常合并，在Master分支上生成一个新节点。为了保证版本演进的清晰，推荐此方式
 * `git push origin --delete test`删除远程分支
 * `git branch -d test`删除本地分支
+* `git branch -u 远端主机别名/远程分支名`修改跟踪关系
+* `git checkout -b 本地分支名 远端主机别名/远程分支名`创建跟踪分支
+* `git checkout --track 远端主机别名/远程分支名`当然也可以不指定分支名，使用远程分支同名
 ## 设置远程服务器的版本库地址
 * `git remote -v` 查询所有远程版本库地址
 * `git remote add origin url` 添加远程版本库
@@ -56,6 +59,12 @@ git revert 0ffaacc   //撤销0ffaacc这次提交
 * 使用revert HEAD是撤销最近的一次提交，如果你最近一次提交是用revert命令产生的，那么你再执行一次，就相当于撤销了上次的撤销操作，换句话说，你连续执行两次revert HEAD命令，就跟没执行是一样的
 * 使用revert HEAD~1 表示撤销最近2次提交，这个数字是从0开始的，如果你之前撤销过产生了commi id，那么也会计算在内的。
 * 如果使用 revert 撤销的不是最近一次提交，那么一定会有代码冲突，需要你合并代码，合并代码只需要把当前的代码全部去掉，保留之前版本的代码就可以了.
+##  git 查看某个文件的修改记录
+```
+cd src  //切换到该文件目录下
+git log --oneline -5 <fineName>
+git show <版本号>
+```
 ##  本地保存修改
 +   $ git add * 将所有修改加入暂存区
 +   $ git commit -m '该次修改的说明' 将暂存区的修改永久保存到版本库

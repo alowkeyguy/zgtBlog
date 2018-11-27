@@ -59,9 +59,6 @@ git revert 0ffaacc   //撤销0ffaacc这次提交
 ##  本地保存修改
 +   $ git add * 将所有修改加入暂存区
 +   $ git commit -m '该次修改的说明' 将暂存区的修改永久保存到版本库
-
-##  上传本地版本至远程版本库
-+   $ git push origin master 
  
 ##  查看版本
 +   $ git log

@@ -65,6 +65,8 @@ cd src  //切换到该文件目录下
 git log --oneline -5 <fineName>
 git show <版本号>
 ```
+## [Git 基础 - 撤消操作](https://git-scm.com/book/zh/v2/Git-%E5%9F%BA%E7%A1%80-%E6%92%A4%E6%B6%88%E6%93%8D%E4%BD%9C)
+* `git status`命令会有提示
 ##  本地保存修改
 +   $ git add * 将所有修改加入暂存区
 +   $ git commit -m '该次修改的说明' 将暂存区的修改永久保存到版本库

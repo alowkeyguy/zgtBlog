@@ -11,3 +11,6 @@
 * [webpack4搭建Vue开发环境笔记](https://github.com/alowkeyguy/webpack4.x-vue)
 # git
 * [工作中git使用总结](https://github.com/alowkeyguy/zgtBlog/tree/master/git)
+# 服务端
+* [node学习：koa2+sequelize+mysql搭建的一个bolg后台](https://github.com/alowkeyguy/koa2-study)
+* [linux学习--基本命令](https://github.com/alowkeyguy/zgtBlog/issues/2)

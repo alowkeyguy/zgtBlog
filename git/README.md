@@ -37,6 +37,7 @@ Config file location
 * `git branch -u 远端主机别名/远程分支名`修改跟踪关系
 * `git checkout -b 本地分支名 远端主机别名/远程分支名`创建跟踪分支
 * `git checkout --track 远端主机别名/远程分支名`当然也可以不指定分支名，使用远程分支同名
+* `git tag -a 1.2`打个标签
 ## 设置远程服务器的版本库地址
 * `git remote -v` 查询所有远程版本库地址
 * `git remote add origin url` 添加远程版本库

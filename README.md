@@ -16,3 +16,4 @@
 # 服务端
 * [node学习：koa2+sequelize+mysql搭建的一个bolg后台](https://github.com/alowkeyguy/koa2-study)
 * [linux学习--基本命令](https://github.com/alowkeyguy/zgtBlog/issues/2)
+* [nginx配置缓存 && gzip](https://github.com/alowkeyguy/zgtBlog/tree/master/server/nginx)

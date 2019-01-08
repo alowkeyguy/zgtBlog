@@ -124,7 +124,7 @@ nginx配置文件[nginx.config](https://m.w3cschool.cn/nginx/nginx-d1aw28wa.html
 ![](./gzip2.png)
 可以看到压缩效率高达70%，至于加载时间得综合压缩时间和传输时间，由于是本地环境所以这加载时间是没有参考价值的，从app.c0773a51d4aaab88bc2c.js的加载时间到是可以看出压缩过程需要时间，但是影响不大，所以nginx压缩等级的设定基本可以依据服务器的配置来定了，还有那些比较小的文件（gzip_min_length 1k）就不用压缩了，考虑到压缩时间可能会适得其反
 
-[本文使用的nginx配置](./nginx.config)
+[本文使用的nginx配置](https://github.com/alowkeyguy/zgtBlog/blob/master/server/nginx/nginx.conf)
 
 参考：
 * [浏览器的缓存机制](http://coderlt.coding.me/2016/11/21/web-cache/)

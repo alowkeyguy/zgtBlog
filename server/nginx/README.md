@@ -99,6 +99,10 @@ Server: nginx/1.15.7
 ![](./catch.png)
 
 在这里将除了index.html以外的所有资源文件都缓存的原因，是现在前端开发的过程中都会用webpack打包资源文件，并用hash命名，如果有改动，资源文件名字会改变，所以在这里我们只要确定用户拿到的index.html文件是最新的就行，就能确保拿到的资源文件版本没问题
+## 用户行为与缓存
+* 用户在地址栏回车、页面链接跳转、新开窗口、前进后退时，缓存是有效的
+* 用户在点击浏览器刷新或按 F5 时，Last-Modified/Etag 是有效的，但Expires、Cache-Control 重置失效
+* 用户在强制刷新按 Ctr+F5 时，缓存全部失效
 
 # gzip
 nginx配置文件[nginx.config](https://m.w3cschool.cn/nginx/nginx-d1aw28wa.html)详解

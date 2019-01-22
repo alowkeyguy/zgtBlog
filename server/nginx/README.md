@@ -103,6 +103,10 @@ Server: nginx/1.15.7
 * 用户在地址栏回车、页面链接跳转、新开窗口、前进后退时，缓存是有效的
 * 用户在点击浏览器刷新或按 F5 时，Last-Modified/Etag 是有效的，但Expires、Cache-Control 重置失效
 * 用户在强制刷新按 Ctr+F5 时，缓存全部失效
+## 浏览器缓存策略
+* 对于某些不需要缓存的资源，可以使用 Cache-control: no-store ，表示该资源不需要缓存
+* 对于频繁变动的资源（比如经常需要刷新的首页，资讯论坛新闻类），可以使用 Cache-Control: no-cache 并配合 ETag 使用，表示该资源已被缓存，但是每次都会发送请求询问资源是否更新。
+* 对于代码文件来说，通常使用 Cache-Control: max-age=31536000 并配合策略缓存使用，然后对文件进行指纹处理，一旦文件名变动就会立刻下载新的文件。
 
 # gzip
 nginx配置文件[nginx.config](https://m.w3cschool.cn/nginx/nginx-d1aw28wa.html)详解

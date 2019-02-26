@@ -1,12 +1,12 @@
 # 张功涛的博客
-# vue
+# js
+* 【译】[JavaScript中的执行上下文和队列（栈）的关系？](https://github.com/alowkeyguy/zgtBlog/blob/master/translate/execution-context)
+* 【译】[Tasks(任务), microtasks(微任务), queues（队列） and schedules（回调队列）](https://github.com/alowkeyguy/zgtBlog/blob/master/translate/Tasks-microtasks-queues-schedules)
+* [实现一个简易版promise](https://github.com/alowkeyguy/zgtBlog/issues/5)
+# vue & react
 * [学习vue服务器渲染框架nuxtjs过程中写的一个小demo](https://github.com/alowkeyguy/zgtBlog/tree/master/vue/nuxt-study)
 * [这是在学习预渲染的过程中写的一个小demo](https://github.com/alowkeyguy/zgtBlog/tree/master/vue/prerender-demo)
-# react
 * [react如何通过shouldComponentUpdate来减少重复渲染](https://github.com/alowkeyguy/zgtBlog/blob/master/react/react-rerender)
-# 翻译
-* [JavaScript中的执行上下文和队列（栈）的关系？](https://github.com/alowkeyguy/zgtBlog/blob/master/translate/execution-context)
-* [Tasks(任务), microtasks(微任务), queues（队列） and schedules（回调队列）](https://github.com/alowkeyguy/zgtBlog/blob/master/translate/Tasks-microtasks-queues-schedules)
 # css
 * [css动画transition && animation](https://github.com/alowkeyguy/zgtBlog/issues/3)
 # webpack

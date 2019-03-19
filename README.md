@@ -1,6 +1,6 @@
 # 张功涛的博客
 # js
-* [preventDefault，stopPropagetion，return false](https://github.com/alowkeyguy/zgtBlog/tree/master/js/preventDefault&stopPropagetion)
+* [preventDefault，stopPropagetion，return false](https://github.com/alowkeyguy/zgtBlog/tree/master/js/preventDefault%20%26%20stopPropagetion)
 * [开发一个psotcss插件](https://github.com/alowkeyguy/zgtBlog/issues/6)
 * [实现一个简易版promise](https://github.com/alowkeyguy/zgtBlog/issues/5)
 * [观看罗伯茨的演讲视频做了两张event loop的git](https://github.com/alowkeyguy/zgtBlog/tree/master/js/event-loop-Roberts)

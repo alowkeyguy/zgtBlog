@@ -1,5 +1,6 @@
 # 张功涛的博客
 # js
+* [babel归纳总结](https://github.com/alowkeyguy/zgtBlog/issues/7)
 * [preventDefault，stopPropagetion，return false](https://github.com/alowkeyguy/zgtBlog/tree/master/js/preventDefault%20%26%20stopPropagetion)
 * [开发一个psotcss插件](https://github.com/alowkeyguy/zgtBlog/issues/6)
 * [实现一个简易版promise](https://github.com/alowkeyguy/zgtBlog/issues/5)

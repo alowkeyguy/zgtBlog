@@ -11,10 +11,11 @@
 * [react如何通过shouldComponentUpdate来减少重复渲染](https://github.com/alowkeyguy/zgtBlog/blob/master/react/react-rerender)
 * [学习vue服务器渲染框架nuxtjs过程中写的一个小demo](https://github.com/alowkeyguy/zgtBlog/tree/master/vue/nuxt-study)
 * [这是在学习预渲染的过程中写的一个小demo](https://github.com/alowkeyguy/zgtBlog/tree/master/vue/prerender-demo)
+# webpack
+* [由'~'问题对webpack项目资源文件处理的探索](https://github.com/alowkeyguy/zgtBlog/issues/8)
+* [webpack4搭建Vue开发环境笔记](https://github.com/alowkeyguy/webpack4.x-vue)
 # css
 * [css动画transition && animation](https://github.com/alowkeyguy/zgtBlog/issues/3)
-# webpack
-* [webpack4搭建Vue开发环境笔记](https://github.com/alowkeyguy/webpack4.x-vue)
 # git
 * [工作中git使用总结](https://github.com/alowkeyguy/zgtBlog/tree/master/git)
 # 网络

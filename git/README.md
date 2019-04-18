@@ -77,52 +77,18 @@ git show <版本号>
 +   $ git log --oneline
 +   $ git log --graph --oneline --decorate
  
-##  版本回滚
-+   $ git reset --hard commit_id 通过git log看到的某个提交开头的字符串就是commit_id 
- 
-##  多人协助 分支branch
-+   $ git branch 查看所有分支名
-+   
-+   $ git branch new-branchName 以当前版本创建新分支
-+   $ git branch -d branchName 删除分支
-+   
-+   $ git checkout branchNmae 切换分支   
- 
-##  合并分支
-+   $ git merge other-branch-name 将其他分支合并到当前分支
-+   如果两个分支的同一文件都有过修改，而且修改不相同，就会出现合并冲突，需要选择使用哪一个修改
-+   打开命令行中提示有冲突的文件，Git用<<<<<<<，=======，>>>>>>>标记出不同分支的内容，删除这些标记，把文件修改成想要保存的，保存
-+   提交
-+   $ git add conflictFileName 或者 $ git add *
-+   $ git commit -m '修改冲突说明'
- 
-##  多人开发流程
-+   主分支master，也可以新建一个dev分支作为频繁修改的开发主分支，master作为稳定的版本主分支
-+   每个人有一个自己的分支，开发时，切换到自己的分支，把修改提交到自己的分支
-+   完成一个小修改后，需要汇总到主分支时，
-    +   切换到主分支，使用pull，把主分支更新到与远程版本库一致
-    +   使用merge，把个人分支合并到主分支
-    +   使用push把主分支上传远程版本库
-    +        git log --oneline 查看最新的commit_id
-    +        切换到个人分支，git reset --hard commit_id，将个人分支指向最新提交
-    +        
-+   如果多人同一时刻汇总，后上传的人可能会因为冲突（自己合并时的主分支与现在远程主分支由于有人提交而不一致了）而上传失败，需要将主分支回滚到合并前，重新进行一次
-+   如果多人开发需要修改的文件有较多交集，应当经常进行汇总，以免积累过多冲突
+## 标签
+1.  添加标签
+```
+$ git tag -a v1.4 -m '标签注释'
+```
+2.  追加标签
+```
+$ git tag -a v1.2 9fceb02
+```
+> 默认情况下，git push 并不会把标签传送到远端服务器上，只有通过显式命令才能分享标签到远端仓库。其命令格式如同推送分支，运行 git push origin [tagname] 即可
+>
+> 如果要一次推送所有本地新增的标签上去，可以使用 --tags 选项
 
-##  切换的develop分支，如果没有就新建个
-+  $ git checkout -b develop origin/develop
-
-##  其它
-* 显示command的helpgit help <command>
-* 提交修改内容git commit "message"
-* 将工作文件修改提交到本地暂存区git add <file>
-* 将本地主分支推到远程git push -u <remoteName> <localBrachName>
-* 克隆远程仓库git clone <url>
-* 初始化仓库git init
-* 创建仓库git remote add <remoteName> <url>
-* 删除远程仓库git remote rm <name>
-* 修改远程主机名git remote rename <remoteName> <newRemoteName>
-* 拉取远程仓库git pull <remoteName> <localBrachName>
-* 修改远程仓库git remote set-url --push <remoteName> <newUrl>
-* 获取远程仓库的更新git fetch <remoteName>
-* 获取远程仓库特定分支的更新git fetch <remoteName> <brachName>
+参考： 
+* [基础 - 打标签](https://git-scm.com/book/zh/v1/Git-%E5%9F%BA%E7%A1%80-%E6%89%93%E6%A0%87%E7%AD%BE)

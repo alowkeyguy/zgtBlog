@@ -1,4 +1,5 @@
 让记录，成为一种习惯
+* [记一次Taro开发移动端项目的总结](https://github.com/alowkeyguy/zgtBlog/issues/10)
 # js
 * [babel归纳总结](https://github.com/alowkeyguy/zgtBlog/issues/7)
 * [preventDefault，stopPropagetion，return false](https://github.com/alowkeyguy/zgtBlog/tree/master/js/preventDefault%20%26%20stopPropagetion)
